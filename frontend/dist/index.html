@@ -26,9 +26,9 @@
       <script>
           window.__dynamic_base__ = window.proxy.__INJECTED_PUBLIC_PATH_BY_QIANKUN__.substring(0,window.proxy.__INJECTED_PUBLIC_PATH_BY_QIANKUN__.length-1)
       </script>
-    <script crossorigin="">import(window.__dynamic_base__+'/assets/index-96837449.js').finally(() => {
+    <script crossorigin="">import(window.__dynamic_base__+'/assets/index-de26f036.js').finally(() => {
             
-    const qiankunLifeCycle = window.moudleQiankunAppLifeCycles && window.moudleQiankunAppLifeCycles['eve-plugin-vue3-template'];
+    const qiankunLifeCycle = window.moudleQiankunAppLifeCycles && window.moudleQiankunAppLifeCycles['eve-redis'];
     if (qiankunLifeCycle) {
       window.proxy.vitemount((props) => qiankunLifeCycle.mount(props));
       window.proxy.viteunmount((props) => qiankunLifeCycle.unmount(props));
@@ -82,8 +82,8 @@ document.getElementsByTagName(item.parentTagName)[0].appendChild(childNode);
   const update = createDeffer('update');
 
   ;(global => {
-    global.qiankunName = 'eve-plugin-vue3-template';
-    global['eve-plugin-vue3-template'] = {
+    global.qiankunName = 'eve-redis';
+    global['eve-redis'] = {
       bootstrap,
       mount,
       unmount,

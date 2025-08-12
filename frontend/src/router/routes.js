@@ -6,21 +6,31 @@ export const routes = [
     component: ()=>import("@/layouts/Layout.vue"),
     children: [
       {
-        path: 'hello-world',
-        component: ()=>import('@/views/helloworld/index.vue'),
-        name: 'hello-world',
+        path: 'redis-info',
+        component: ()=>import('@/views/redis/index.vue'),
+        name: 'redis-info',
         meta: {
-          title: '访问es',
-          icon: 'el-icon-coin'
+          title: 'Redis信息总览',
+          icon: 'el-icon-monitor'
         }
       },
       {
-        path: 'db-test',
-        component: ()=>import('@/views/db_test/DbTest.vue'),
-        name: 'db-test',
+        path: 'memory-analysis',
+        component: ()=>import('@/views/redis/memory-analysis.vue'),
+        name: 'memory-analysis',
         meta: {
-          title: '操作数据库',
-          icon: 'el-icon-coin'
+          title: '内存分析',
+          icon: 'el-icon-pie-chart'
+        }
+      },
+
+      {
+        path: 'redis-manager',
+        component: ()=>import('@/views/redis/redis-manager.vue'),
+        name: 'redis-manager',
+        meta: {
+          title: 'Key管理器',
+          icon: 'el-icon-s-data'
         }
       },
     ]

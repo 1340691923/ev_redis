@@ -4,7 +4,6 @@ import (
 	"context"
 	"embed"
 	_ "embed"
-	"ev-plugin/backend/migrate"
 	"ev-plugin/backend/router"
 	"ev-plugin/frontend"
 	"flag"
@@ -26,14 +25,12 @@ func main() {
 		Assets: &plugin_server.Assets{
 			PluginJsonBytes: pluginJsonBytes,
 			FrontendFiles:   frontend.StatisFs,
-			Icon: logoPng,
+			Icon:            logoPng,
 		},
 		ReadyCallBack: func(ctx context.Context) {
 
 		},
-		Migration: &build.Gormigrate{Migrations: []*build.Migration{
-			migrate.V0_0_1(),
-		}}, //数据版本迁移
+		Migration:      &build.Gormigrate{Migrations: []*build.Migration{}}, //数据版本迁移
 		RegisterRoutes: router.NewRouter,
 	})
 }
